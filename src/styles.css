@@ -33,7 +33,7 @@ body{
     justify-content: center;
     align-items: center;
 
-    background-color: black;
+    
 
     height:500px;
     
@@ -67,18 +67,56 @@ button:active{
 
 /*  Menu */
 
-.menu{
-    height:80%;
-    width:80%;
-    display:flex;
-    flex-direction: column;
+.menu-container{
+    height:100%;
+    width:100%;
     
-    background-color: grey;
     padding:30px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px  50px auto 50px auto;
+    grid-template-areas: 
+    "title"
+    "drinks-title"
+    "drinks-container"
+    "food-title"
+    "food-container";
+    gap:20px;
 }
 .headLine{
+   grid-area: title;
+   display:flex;
+   justify-content: center;
+   font-size: 3rem;
+   
+}
+.drink-title, .food-title{
+    font-size: 2rem;
+}
+.drinks-container{
+    grid-area: drinks-container;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
     
 }
-.drinkMenu{
+.card{
+    background-color: white;
+    width: 200px;
+    height:100px;
+
+    padding:30px;
+
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.15) 9px 11px 14px 12px;
+    border-radius: 16px;
+
+    border-left: 8px solid gold;
+
     display:flex;
+    justify-content: flex-start;
+}
+.food-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
 }
