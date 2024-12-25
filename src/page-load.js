@@ -9,17 +9,22 @@ export function home(){
 
     const content = document.getElementById('content');
 
+    const home_container = document.createElement('div');
+    home_container.classList.add('home-container');
+
     const headLine = document.createElement('div');
-    const description = document.createElement('div');
-
     headLine.classList.add("headLine");
-    description.classList.add("description");
+    headLine.textContent = "Restaurant Basic";
 
-    headLine.textContent = "Restaurant A";
+    const description = document.createElement('div');
+    description.classList.add("description");
     description.textContent = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, quaerat aspernatur dolorem, asperiores similique amet ipsum non autem doloremque hic culpa ducimus facilis labore veniam. Eos explicabo quaerat debitis accusantium!";
 
-    content.appendChild(headLine);
-    content.appendChild(description);
+    home_container.appendChild(headLine);
+    home_container.appendChild(description);
+
+    content.appendChild(home_container);
+    
 
 
 }
@@ -29,9 +34,9 @@ export function menu(){
     const menu_container = document.createElement('div');
     menu_container.classList.add('menu-container')
 
-    const headLine = document.createElement('div');
-    headLine.classList.add("headLine");
-    headLine.textContent = "Menu";
+    const menu_title = document.createElement('div');
+    menu_title.classList.add("menu-title");
+    menu_title.textContent = "Menu";
 
     //drinks title
     const drink_title = document.createElement('div');
@@ -76,7 +81,7 @@ export function menu(){
 
     //adding to menu
 
-    menu_container.appendChild(headLine);
+    menu_container.appendChild(menu_title);
     menu_container.appendChild(drink_title);
     menu_container.appendChild(drinks_container);
     menu_container.appendChild(food_title);
@@ -88,6 +93,50 @@ export function menu(){
 
 }
 
-export function about(){
+export function contact(){
+    const content = document.getElementById('content');
 
+    // three cards with owner 1, 2 ,3 info
+
+    const card_container = document.createElement('div');
+    card_container.classList.add('card-container');
+
+
+    
+    const contact_card_1 = document.createElement('div');
+    contact_card_1.classList.add('contact-card');
+    
+    const contact_card_name  = document.createElement('div');
+    contact_card_name.textContent = "Owner 1";
+
+    const contact_card_tel  = document.createElement('div');
+    contact_card_tel.textContent = "555-555-5555";
+
+    const contact_card_email  = document.createElement('div');
+    contact_card_email.textContent = "owner1@email.com";
+
+    contact_card_1.appendChild(contact_card_name);
+    contact_card_1.appendChild(contact_card_tel);
+    contact_card_1.appendChild(contact_card_email);
+
+    const contact_card_2 = document.createElement('div');
+    contact_card_2.classList.add('contact-card');
+    
+    const contact_card_2_name  = document.createElement('div');
+    contact_card_2_name.textContent = "Owner 2";
+
+    const contact_card_2_tel  = document.createElement('div');
+    contact_card_2_tel.textContent = "555-555-5556";
+
+    const contact_card_2_email  = document.createElement('div');
+    contact_card_2_email.textContent = "owner2@email.com";
+
+    contact_card_2.appendChild(contact_card_2_name);
+    contact_card_2.appendChild(contact_card_2_tel);
+    contact_card_2.appendChild(contact_card_2_email);
+    
+    card_container.appendChild(contact_card_1);
+    card_container.appendChild(contact_card_2);
+
+    content.appendChild(card_container);
 }

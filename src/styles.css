@@ -21,19 +21,17 @@ body{
     justify-content: center;
     align-items: center;
     gap:50px;
-    border:10px solid beige;
     padding:30px;
 }
 
 #content{
-    border:10px solid beige;
+
     grid-area: content;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    
 
     height:500px;
     
@@ -41,10 +39,20 @@ body{
     gap:10px;
     
 }
-
-.headline{
-
+.home-container{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
+.headLine{
+    grid-area: title;
+    font-size: 5rem;
+    font-weight: bold;
+ }
+
 .description{
    max-width: 50ch;
 }
@@ -77,20 +85,19 @@ button:active{
     grid-template-columns: 1fr;
     grid-template-rows: 50px  50px auto 50px auto;
     grid-template-areas: 
-    "title"
+    "menu_title"
     "drinks-title"
     "drinks-container"
     "food-title"
     "food-container";
     gap:20px;
 }
-.headLine{
-   grid-area: title;
-   display:flex;
-   justify-content: center;
-   font-size: 3rem;
-   
+.menu-title{
+    display:flex;
+    justify-content: center;
+    font-size: 4rem;
 }
+
 .drink-title, .food-title{
     font-size: 2rem;
 }
@@ -119,4 +126,30 @@ button:active{
 .food-container{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+}
+.card-container{
+    width: 100%;
+    height: 100%;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap:20px;
+
+}
+
+.contact-card{
+    background-color: white;
+
+    padding:30px;
+
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.15) 9px 11px 14px 12px;
+    border-radius: 16px;
+
+    border: 8px solid gold;
+
+    display:flex;
+    flex-direction: column;
+    font-size: 2rem;
+    align-items: center;
 }

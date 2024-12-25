@@ -1,10 +1,10 @@
 import "./styles.css"
-import {home, clear, menu} from '../src/page-load'
+import {home, clear, menu, contact} from '../src/page-load'
 
 
 const home_btn = document.querySelector('.home-btn')
 const menu_btn = document.querySelector('.menu-btn')
-const about_btn = document.querySelector('.about-btn')
+const contact_btn = document.querySelector('.contact-btn')
 
 
 home_btn.addEventListener('click', () =>{
@@ -18,10 +18,11 @@ menu_btn.addEventListener('click', () =>{
     //refresh
 })
 
-about_btn.addEventListener('click', () =>{
+contact_btn.addEventListener('click', () =>{
     clear();
-    home();
+    contact();
     //refresh
 })
 
 
+home();
